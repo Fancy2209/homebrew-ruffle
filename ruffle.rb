@@ -8,7 +8,7 @@ class Ruffle < Formula
   depends_on "openjdk" => :build
 
   def install
-    system "cargo", "build", "--release", "--package=ruffle_desktop", "--features=sandbox,jpegxr"
+    system "cargo", "build", "--release", "--package=ruffle_desktop", "--features=sandbox,jpegxr,lzma"
     bin.install "target/release/ruffle_desktop" => "ruffle"
   end
 end
